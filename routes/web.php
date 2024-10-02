@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ProductController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -31,4 +32,5 @@ Route::get('/edit/{id}',[PagesController:: class ,'edit']);
 Route::get('/delete/{id}',[PagesController:: class ,'delete']);
 // Route::get('/delete/{id}',[PagesController:: class ,'editProduct']);
 Route::post('/savechanges',[PagesController:: class ,'savechanges']);
+Route::resource('/products', ProductController::class);
 // Route::get('/services/{id}/{name}',[PagesController:: class ,'services']);
