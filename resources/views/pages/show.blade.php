@@ -18,5 +18,7 @@
      <h1>{{$products->description}}</h1>
      <hr>
      <h4>{{$products->created_at}}</h4>
+     <a href="/edit/{{$products->id}}">Edit</a>
+     <a href="/delete/{{$products->id}}">Delete</a>
   </body>
 </html>

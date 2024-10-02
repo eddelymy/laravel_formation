@@ -27,4 +27,8 @@ Route::get('/services',[PagesController:: class ,'services']);
 Route::get('/show/{id}',[PagesController:: class ,'show']);
 Route::get('/newproduct',[PagesController:: class ,'newProduct']);
 Route::post('/saveproduct',[PagesController:: class ,'saveProduct']);
+Route::get('/edit/{id}',[PagesController:: class ,'edit']);
+Route::get('/delete/{id}',[PagesController:: class ,'delete']);
+// Route::get('/delete/{id}',[PagesController:: class ,'editProduct']);
+Route::post('/savechanges',[PagesController:: class ,'savechanges']);
 // Route::get('/services/{id}/{name}',[PagesController:: class ,'services']);

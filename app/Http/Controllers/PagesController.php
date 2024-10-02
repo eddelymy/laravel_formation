@@ -51,5 +51,22 @@ class PagesController extends Controller
         Session::put('message','Le produit a ete insere avec succes');
         return redirect('/newproduct');
     }
+    function edit($id){
+        $product = Product::find($id);
+        return view('pages.edit-product')->with('product',$product);
+    }
+    function savechanges(Request $request){
+        $product = Product::find($request->id );
+        $product->product_name = $request->product_name ;
+        $product->product_price = $request->product_price ;
+        $product->description = $request->product_description ;
+        $product->update();
+        return redirect('/services');
+    }
+    function delete($id){
+        $product = Product::find($id );
+        $product->delete();
+        return redirect('/services');
+    }
     
 }
